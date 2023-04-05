@@ -17,7 +17,7 @@ function countUpAndDown(n) {
   for (var j = n - 1; j >= 0; j--) {
     console.log(j);
   }
-  console.log("Back down. Bye!");
+  console.log("Back do2wn. Bye!");
 }
 function logAllBinaries(n) {
   var count = 0;
