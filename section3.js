@@ -29,10 +29,10 @@ function logAllBinaries(n) {
   console.log(lastNum);
 }
 let t1 = performance.now();
-//let result = addUpTo1(1000000000);
+let result = addUpTo1(1000000000);
 //let result = addUpTo2(1000000000);
 //let result = countUpAndDown(10000);
-let result = logAllBinaries(10);
+//let result = logAllBinaries(10);
 let t2 = performance.now();
 
 console.log(`Time Elapsed : ${(t2 - t1) / 1000} seconds.`);
