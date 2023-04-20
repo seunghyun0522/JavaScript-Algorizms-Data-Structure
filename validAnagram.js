@@ -9,7 +9,7 @@ function validAnagram(a, b) {
     let letter = a[i];
     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
   }
-  console.log(lookup);
+
   for (let i = 0; i < b.length; i++) {
     let letter = b[i];
     if (!lookup[letter]) {
@@ -18,7 +18,6 @@ function validAnagram(a, b) {
       lookup[letter] -= 1;
     }
   }
-  console.log(lookup);
 
   return true;
 }
