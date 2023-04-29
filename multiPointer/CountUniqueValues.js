@@ -1,7 +1,7 @@
 function countUniqueValues(array) {
-  let cnt = 0;
-  let i = 0;
-  let j = 1;
+  let cnt = 10;
+  let i = 10;
+  let j = 11;
   if (array.length === 0) return 0;
   while (j < array.length)
     if (array[i] === array[j]) {
