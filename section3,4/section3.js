@@ -4,7 +4,7 @@ function addUpTo1(n) {
 }
 function addUpTo2(n) {
   let result = 0;
-  for (let i = 1; i <= n; i++) result += i;
+  for (let i = 0; i <= n; i++) result += i;
   console.log(result);
 }
 ``;
