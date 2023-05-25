@@ -7,12 +7,11 @@ function selectionSort(arr) {
       }
     }
     console.log(arr);
-    console.log("Swapping to");
+
     var temp = arr[i];
     arr[i] = arr[min];
     arr[min] = temp;
     console.log(arr);
-    console.log("*************");
   }
   return arr;
 }
