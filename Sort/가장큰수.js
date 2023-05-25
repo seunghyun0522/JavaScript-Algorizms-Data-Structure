@@ -1,34 +1,37 @@
-function swapFunction(arr, idx1, idx2) {
-  var temp = arr[idx1];
-  arr[idx1] = arr[idx2];
-  arr[idx2] = temp;
-}
+function solution(number) {
+  var answer = "";
 
-//Bubble Sort!
-function Bubblesort(array) {
-  let max = 0;
-  let cnt = 0;
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      console.log(array);
-      console.log(cnt++);
-      swapFunction(array, i, j);
-      // //   let tmp = array.join("");
-      // //   console.log(tmp);
-      //   if (tmp > max) max = tmp;
+  number.sort(function (a, b) {
+    // a,b 를 문자로 변환
+    var a_str = a.toString();
+    var b_str = b.toString();
+
+    // 비교를 위해 더함 sum_str1 : 610, sum_str2 : 106
+    var sum_str1 = a_str + b_str;
+    var sum_str2 = b_str + a_str;
+
+    // 문자열끼리 크기 변환이 가능
+
+    if (sum_str1 > sum_str2) {
+      // -1 을 변환해서 change
+      return -1;
+    } else if (sum_str1 == sum_str2) {
+      return 0;
+    } else {
+      // 그대로
+      return 1;
     }
+  });
+
+  for (let i = 0; i < number.length; i++) {
+    answer += number[i];
   }
 
-  return max.toString();
-}
+  if (parseInt(answer) === 0) {
+    answer = "0";
+  }
 
-function solution(numbers) {
-  var answer = "";
-  let max = Bubblesort(numbers);
-  console.log(max);
   return answer;
 }
 
-const numbers = [3, 30, 34, 5, 9];
-solution(numbers);
-//"6210"
+solution([0, 0]);
