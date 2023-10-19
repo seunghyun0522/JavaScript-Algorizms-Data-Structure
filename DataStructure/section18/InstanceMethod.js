@@ -26,6 +26,7 @@ class Student {
     });
     return sum / this.scores.length;
   }
+
   static EnrollStudents() {
     return "ENROLLING STUDENTS!";
   }
