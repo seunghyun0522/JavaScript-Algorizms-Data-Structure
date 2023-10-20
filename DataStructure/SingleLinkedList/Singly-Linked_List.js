@@ -89,6 +89,17 @@ class LinkedList {
       return current;
     }
   }
+  shift() {
+    if (!this.head) return undefined;
+    let currentHead = this.head;
+    this.head = currentHead.next;
+    this.length--;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return currentHead;
+  }
 }
 
 let l = new LinkedList();
@@ -105,4 +116,6 @@ l.pop();
 l.traverse();
 
 l.pop();
+l.traverse();
+l.shift();
 l.traverse();
